@@ -1,0 +1,22 @@
+<h1>BURGERS!</h1>
+
+<h2>BUBUBUBGERS</h2>
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.name}}
+
+        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="true">
+          <button type="submit">Time is up</button>
+        </form>
+
+        {{> burgers/delete-burgers}}
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Cats that are sleepy!</h2>
+

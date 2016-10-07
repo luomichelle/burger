@@ -26,11 +26,11 @@ router.get('/burgers', function (req, res) {
 
 
 router.post('/burgers/create', function (req, res) {
-	burger.create('burger_name', [req.body.name], function () {
-		burger.redirect('/burgers');
+	console.log("working???")
+	burgers.create('burger_name', [req.body.name], function () {
+		res.redirect('/burgers');
 	});
 });
-
 
 
 router.put('/burgers/update/:id', function (req, res) {
@@ -52,11 +52,6 @@ router.delete('/burgers/delete/:id', function (req, res) {
 		res.redirect('/burgers');
 	});
 });
- 
-router.get(function (req, res) {  
-	burgers.all(function(data){
-		console.log(data)})
-	});
 
 
 module.exports = router;

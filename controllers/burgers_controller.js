@@ -12,8 +12,6 @@ router.get('/', function (req, res) {
 });
 
 
-console.log(burgers);
-
 router.get('/burgers', function (req, res) {
 	burgers.all(function (data) {
 		console.log(data)
@@ -46,9 +44,9 @@ router.put('/burgers/update/:id', function (req, res) {
 });
 
 router.delete('/burgers/delete/:id', function (req, res) {
-	var condition = 'id = ' + req.params.id;
+	var condition = 'id = ' + req.params.id;   //params = object property
 
-	cat.delete(condition, function () {
+	burgers.delete(condition, function () {
 		res.redirect('/burgers');
 	});
 });

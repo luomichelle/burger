@@ -25,7 +25,9 @@ var burgermodel = {
 		});
 	},
 	delete: function (condition, cb) {
+		console.log("workings??")
 		orm.delete('burgers',condition, function (res) {
+			console.log("workings11111??")
 			cb(res);
 			console.log("orm model DELELTE is working")
 		});

@@ -1,15 +1,15 @@
 var mysql = require('mysql');
 var connection;
 
-if(process.env.JAWSDB_URL) {
-	connection = new Sequelize(process.env.JAWSDB_URL);
-}else{
-	connection =new Sequelize('burgers_db','root','guagua',{
-	host: 'localhost',
-	dialect: 'mysql',
-	port:'3306'
-	})
-}
+// if(process.env.JAWSDB_URL) {
+// 	connection = new Sequelize(process.env.JAWSDB_URL);
+// }else{
+// 	connection =new Sequelize('burgers_db','root','guagua',{
+// 	host: 'localhost',
+// 	dialect: 'mysql',
+// 	port:'3306'
+// 	})
+// }
 
 
 

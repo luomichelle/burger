@@ -11,15 +11,25 @@ var connection;
 // 	})
 // }
 
+if(process.env.JAWSDB_URL) {
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else{
+	connection = mysql.createConnection({
+	host: 'sulnwdk5uwjw1r2k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+	user: 'e0ovph1h6r9sbxf1',
+	password:'y79yftwdkhws0geb',
+	database: 'wcivbznkv26c6js5'
+	})
+}
 
 
-var connection = mysql.createConnection({
-	port: 3306,
-	host: 'localhost',
-	user: 'root',
-	password: 'guagua',
-	database: 'burgers_db'
-});
+// var connection = mysql.createConnection({
+// 	port: 3306,
+// 	host: 'localhost',
+// 	user: 'root',
+// 	password: 'guagua',
+// 	database: 'burgers_db'
+// });
 
 connection.connect(function (err) {
 	if (err) {

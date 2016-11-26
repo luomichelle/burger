@@ -1,4 +1,4 @@
-
+> ![gif](https://j.gifs.com/qjDJLp.gif)
 
 ### burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).
 
